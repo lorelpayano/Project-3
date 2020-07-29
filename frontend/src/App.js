@@ -1,13 +1,18 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
-import Home from "./components/home/Home";
+import Home from "./components/Home";
 import NotFound from "./components/404/NotFound.js";
 import SignUp from "./components/auth/SignUp";
 import LogIn from "./components/auth/LogIn";
-import Profile from "./components/profile/Profile";
+import Profile from "./components/Profile";
 import actions from "./services/index";
 import GoogleAuth from "./components/auth/GoogleAuth";
 import GoogleAuthLogin from "./components/auth/GoogleAuthLogin";
+import Completed from './components/Completed'
+import Ongoing from './components/Ongoing'
+import NotStarted from './components/NotStarted'
+// import Navbar from './components/Navbar'
+import './index.css'
 
 class App extends Component {
   state = {};
@@ -25,46 +30,50 @@ class App extends Component {
     this.setUser({ email: null, createdAt: null, updatedAt: null, _id: null }); //FIX
   };
 
+
+
   render() {
     return (
       <BrowserRouter>
+
+      {/* <Navbar /> */}
+     
         {this.state.email}
-        <nav>
-          <NavLink to="/">Home |</NavLink>
+
+        <nav class='nav'>
+        
+          <NavLink class='nav-links' to="/">Home</NavLink>
+          <NavLink class='nav-links' to="/about">About</NavLink>
+          <NavLink class='nav-links' to="">Get Inspired</NavLink>
+
+
 
           {this.state.email ? (
             <Fragment>
-              <NavLink onClick={this.logOut} to="/">
-                Log Out |
-              </NavLink>
-              <NavLink to="/profile">Profile|</NavLink>
+              <NavLink class='nav-links' onClick={this.logOut} to="/">Log Out</NavLink>
+              <NavLink class='nav-links' to="/profile">Profile</NavLink>
             </Fragment>
           ) : (
             <Fragment>
-              <NavLink to="/sign-up">Sign Up |</NavLink>
-              <NavLink to="/log-in">Log In |</NavLink>
+              <NavLink class='nav-links' to="/sign-up">Sign Up</NavLink>
+              <NavLink class='nav-links' to="/log-in">Log In</NavLink>
             </Fragment>
           )}
         </nav>
+
+
+
         <Switch>
           <Route exact path="/" render={(props) => <Home {...props} />} />
-          <Route
-            exact
-            path="/sign-up"
-            render={(props) => <SignUp {...props} setUser={this.setUser} />}
-          />
-          <Route
-            exact
-            path="/log-in"
-            render={(props) => <LogIn {...props} setUser={this.setUser} />}
-          />
-          <Route
-            exact
-            path="/profile"
-            render={(props) => <Profile {...props} user={this.state} />}
-          />
+          <Route exact path="/sign-up" render={(props) => <SignUp {...props} setUser={this.setUser} />}/>
+          <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser} />}/>
+          <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state} />}/>
 
           <Route component={NotFound} />
+          <Route exact path='/completed' render={() => <Completed />}/>
+          <Route exact path='/ongoing' render={() => <Ongoing />}/>
+          <Route exact path='/notstarted' render={() => <NotStarted />}/>
+
         </Switch>
         {!this.state.email && <GoogleAuth setUser={this.setUser} />}
         {!this.state.email && <GoogleAuthLogin setUser={this.setUser} />}

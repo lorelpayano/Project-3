@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/FTWD-OCT-2019/ironplate/issues"
   },
-  "homepage": "https://github.com/FTWD-OCT-2019/ironplate#readme"
+  "homepage": "https://github.com/FTWD-OCT-2019/ironplate#readme",
+  "dependencies": {
+    "cloudinary": "^1.22.0",
+    "react-router-dom": "^5.2.0"
+  }
 }

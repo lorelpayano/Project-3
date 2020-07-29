@@ -20,7 +20,11 @@ const actions = {
   },
   logOut: async () => {
     return await service.get('/logout')
+  },
+  toUpload: async (image) => {
+    return await service.post('/toupload', image)
   }
+  
 };
 
 export default actions;
