@@ -5,8 +5,9 @@ const itemSchema = new Schema(
     image: String,
     links: [String],
     notes: String,
-    supplies: String,
+    supplies: [Object],
     price: String,
+    board: {type: Schema.Types.ObjectId, ref:'Board'}
     },
   {
     timestamps: true,

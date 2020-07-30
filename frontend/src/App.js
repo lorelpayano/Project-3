@@ -8,11 +8,18 @@ import Profile from "./components/Profile";
 import actions from "./services/index";
 import GoogleAuth from "./components/auth/GoogleAuth";
 import GoogleAuthLogin from "./components/auth/GoogleAuthLogin";
-import Completed from './components/Completed'
-import Ongoing from './components/Ongoing'
-import NotStarted from './components/NotStarted'
-// import Navbar from './components/Navbar'
-import './index.css'
+import Completed from './components/Completed';
+import Ongoing from './components/Ongoing';
+import NotStarted from './components/NotStarted';
+// import Navbar from './components/Navbar';
+import './index.css';
+import CreateNew from "./components/CreateNew";
+import About from './components/About';
+import CreateItems from './components/CreateItems';
+import GetInspired from './components/GetInspired';
+import DisplayBoard from './components/DisplayBoard'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends Component {
   state = {};
@@ -44,9 +51,7 @@ class App extends Component {
         
           <NavLink class='nav-links' to="/">Home</NavLink>
           <NavLink class='nav-links' to="/about">About</NavLink>
-          <NavLink class='nav-links' to="">Get Inspired</NavLink>
-
-
+          <NavLink class='nav-links' to="/getinspired">Get Inspired</NavLink>
 
           {this.state.email ? (
             <Fragment>
@@ -62,21 +67,30 @@ class App extends Component {
         </nav>
 
 
+        <div style={{marginTop: '10vh'}}>
 
         <Switch>
           <Route exact path="/" render={(props) => <Home {...props} />} />
+          <Route exact path='/about' render={() => <About />}/>
+          <Route exact path='/getinspired' render={() => <GetInspired />}/>
           <Route exact path="/sign-up" render={(props) => <SignUp {...props} setUser={this.setUser} />}/>
           <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser} />}/>
           <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state} />}/>
-
-          <Route component={NotFound} />
           <Route exact path='/completed' render={() => <Completed />}/>
           <Route exact path='/ongoing' render={() => <Ongoing />}/>
           <Route exact path='/notstarted' render={() => <NotStarted />}/>
+          <Route exact path='/createnew' render={(props ) => <CreateNew  {...props}/>}/>
+          <Route exact path='/board/:id' render={(props) => <DisplayBoard {...props} />} />
+          <Route exact path='/board/:id/add' render={(props ) => <CreateItems {...props}/>}/>
+
+
+          <Route component={NotFound} />
 
         </Switch>
+
         {!this.state.email && <GoogleAuth setUser={this.setUser} />}
         {!this.state.email && <GoogleAuthLogin setUser={this.setUser} />}
+            </div>
       </BrowserRouter>
     );
   }

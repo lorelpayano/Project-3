@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 /* body {
   margin: 0;
   text-align: center;
@@ -26,8 +28,13 @@ code {
   height: 10vh;
 } */
 
+body {
+  font-family: 'Lora', serif;
+}
+
 .nav {
-  padding: 10px 5px 0 0;
+  height: 6vh;
+  padding: 20px 5px 0 0;
   width: 100%;
   position: fixed;
   top: 0;
@@ -35,6 +42,7 @@ code {
   background-color: white;
   z-index: 100;
   justify-content: space-evenly;
+  font-size: 16px;
   /* float: right; */
   /* margin: 0 0 auto auto; */
 }
@@ -72,7 +80,7 @@ code {
 }
 
 .nav a:hover {
-  color: rgb(202, 202, 202);
+  color: rgb(168, 165, 165);
 }
 
 .nav a:active {
@@ -106,8 +114,24 @@ filter: grayscale(40%);
 }
 
 .board-selector {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.board-selector-links {
+  margin: 30px auto;
+}
+
+.create-new {
+  text-align: center;
+  margin: 100px auto;
+}
+
+/* LOGIN */
+
+.login {
+  margin: 100px auto;
 }

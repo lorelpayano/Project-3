@@ -23,8 +23,16 @@ const actions = {
   },
   toUpload: async (image) => {
     return await service.post('/toupload', image)
+  },
+  createBoard: async (board) => {
+    return await service.post('/board/new', board)
+  },
+  getBoards: async () => {
+    return await service.get('/board');
+  },
+  getBoard: async (id) => {
+    return await service.get(`/board/${id}`)
   }
-  
 };
 
 export default actions;
