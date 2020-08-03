@@ -135,3 +135,20 @@ filter: grayscale(40%);
 .login {
   margin: 100px auto;
 }
+
+.board-link {
+  text-decoration: none;
+  color: black;
+
+}
+
+.board-li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px auto;
+}

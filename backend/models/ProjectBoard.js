@@ -16,7 +16,7 @@ const projectSchema = new Schema(
 );
 
 
-module.exports = model("Project", projectSchema);
+module.exports = model("Board", projectSchema);
 
 //board name, inspo-image(upload), supplies, cost
 //file upload cloundinary

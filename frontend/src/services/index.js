@@ -24,15 +24,24 @@ const actions = {
   toUpload: async (image) => {
     return await service.post('/toupload', image)
   },
-  createBoard: async (board) => {
-    return await service.post('/board/new', board)
+  // createBoard: async (board) => {
+  //   return await service.post('/board/new', board)
+  // },
+  getProject: async () => {
+    return await service.get('/projects');
   },
-  getBoards: async () => {
-    return await service.get('/board');
+  getProjects: async (id) => {
+    return await service.get(`/projects/${id}`)
   },
-  getBoard: async (id) => {
-    return await service.get(`/board/${id}`)
-  }
+  createProject: async (item) => {
+    return await service.post('/projects/new', item)
+  },
+  deleteProject: async (id) => {
+    return await service.post(`projects/${id}/delete`);
+  },
+  editProject: async (id, data) => {
+    return await service.post(`/projects/${id}/edit`, data);
+  },
 };
 
 export default actions;

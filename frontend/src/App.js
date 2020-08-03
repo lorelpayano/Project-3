@@ -13,12 +13,11 @@ import Ongoing from './components/Ongoing';
 import NotStarted from './components/NotStarted';
 // import Navbar from './components/Navbar';
 import './index.css';
-import CreateNew from "./components/CreateNew";
 import About from './components/About';
-import CreateItems from './components/CreateItems';
 import GetInspired from './components/GetInspired';
-import DisplayBoard from './components/DisplayBoard'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CreateProject from './components/CreateProject'
+import DisplayProject from "./components/DisplayProject";
 
 
 class App extends Component {
@@ -47,21 +46,21 @@ class App extends Component {
      
         {this.state.email}
 
-        <nav class='nav'>
+        <nav className='nav'>
         
-          <NavLink class='nav-links' to="/">Home</NavLink>
-          <NavLink class='nav-links' to="/about">About</NavLink>
-          <NavLink class='nav-links' to="/getinspired">Get Inspired</NavLink>
+          <NavLink className='nav-links' to="/">Home</NavLink>
+          <NavLink className='nav-links' to="/about">About</NavLink>
+          <NavLink className='nav-links' to="/getinspired">Get Inspired</NavLink>
 
           {this.state.email ? (
             <Fragment>
-              <NavLink class='nav-links' onClick={this.logOut} to="/">Log Out</NavLink>
-              <NavLink class='nav-links' to="/profile">Profile</NavLink>
+              <NavLink className='nav-links' onClick={this.logOut} to="/">Log Out</NavLink>
+              <NavLink className='nav-links' to="/profile">Profile</NavLink>
             </Fragment>
           ) : (
             <Fragment>
-              <NavLink class='nav-links' to="/sign-up">Sign Up</NavLink>
-              <NavLink class='nav-links' to="/log-in">Log In</NavLink>
+              <NavLink className='nav-links' to="/sign-up">Sign Up</NavLink>
+              <NavLink className='nav-links' to="/log-in">Log In</NavLink>
             </Fragment>
           )}
         </nav>
@@ -79,9 +78,8 @@ class App extends Component {
           <Route exact path='/completed' render={() => <Completed />}/>
           <Route exact path='/ongoing' render={() => <Ongoing />}/>
           <Route exact path='/notstarted' render={() => <NotStarted />}/>
-          <Route exact path='/createnew' render={(props ) => <CreateNew  {...props}/>}/>
-          <Route exact path='/board/:id' render={(props) => <DisplayBoard {...props} />} />
-          <Route exact path='/board/:id/add' render={(props ) => <CreateItems {...props}/>}/>
+          <Route exact path='/createproject' render={(props ) => <CreateProject  {...props}/>}/>
+          <Route exact path='/projects/:id' render={(props) => <DisplayProject {...props} />} />
 
 
           <Route component={NotFound} />

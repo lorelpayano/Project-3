@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import actions from "../services/index";
+// import actions from "../services/index";
 
 const Profile = (props) => {
   if (!props.user.email) {
@@ -12,24 +12,24 @@ const Profile = (props) => {
       <div className="welcome">
         <h2>Welcome {props.user.name}!</h2>
       </div>
-      <section class="section-profile">
-        <div class="board-selector">
-          <Link class="nav-links" to="/completed">
+      <section className="section-profile">
+        <div className="board-selector">
+          <Link className="nav-links" to="/completed">
             Completed
           </Link>
         </div>
-        <div class="board-selector">
-          <Link class="nav-links" to="/ongoing">
+        <div className="board-selector">
+          <Link className="nav-links" to="/ongoing">
             Ongoing
           </Link>
         </div>
-        <div class="board-selector">
-          <Link class="nav-links" to="/notstarted">
+        <div className="board-selector">
+          <Link className="nav-links" to="/notstarted">
             Not Started
           </Link>
         </div>
-        <div class="board-selector">
-          <Link class="nav-links" to="/createnew">
+        <div className="board-selector">
+          <Link className="nav-links" to="/createproject">
             Create New
           </Link>
         </div>

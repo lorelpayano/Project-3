@@ -1,24 +1,25 @@
 import React, { Component } from "react";
 import actions from "../services/index";
+import {Link} from 'react-router-dom'
 
 class Completed extends Component {
   state = {
-    boards: [],
+    projects: [],
   };
 
   async componentDidMount() {
-    const res = await actions.getBoards();
+    const res = await actions.getProjects();
     console.log(res);
     this.setState({
-      boards: res.data.board,
+      projects: res.data.project,
     });
   }
 
-  displayBoards(boards) {
+  displayProject(projects) {
     return (
       <ul>
-        {boards.map((b) => (
-          <li key={b._id}>{`${b.boardName} :${b.budget}`}</li>
+        {projects.map((b) => (
+          <li className='board-li'><Link className='board-link' key={b._id}>{`${b.name}: $${b.budget}`}</Link></li>
         ))}
       </ul>
     );
@@ -28,8 +29,8 @@ class Completed extends Component {
     return (
       <div>
         Completed Projects
-        {this.displayBoards(
-          this.state.boards.filter((b) => b.status === "Completed")
+        {this.displayProject(
+          this.state.projects.filter((b) => b.status === "Completed")
         )}
       </div>
     );

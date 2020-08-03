@@ -13,16 +13,14 @@ class Cloudinary extends Component {
     this.setState({
         imageObject: imageObject
     })
-
-    // let res = await actions.toUpload(imageObject);
-    // console.log(res);
   };
 
   handleSubmit = async e => {
     e.preventDefault();
     let res = await actions.toUpload(this.state.imageObject)
     console.log(res)
-    this.props.setUrl(res.data.message)
+    this.props.setUrl(res.data.message);
+    this.setState({imageObject: {}})
   }
 
   render() {

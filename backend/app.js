@@ -56,12 +56,10 @@ app.use(logger("dev"));
 
 const index = require("./routes/index");
 const auth = require("./routes/auth");
-const board = require("./routes/board.routes");
-const item = require("./routes/item.routes");
+const project = require("./routes/project.routes");
 app.use("/", index);
 app.use("/", auth);
-app.use("/", board);
-app.use("/", item);
+app.use("/", project);
 
 // Uncomment this line for production
 let client = path.join(__dirname + "../public/index.html");
