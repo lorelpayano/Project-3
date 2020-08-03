@@ -5,6 +5,7 @@ const projectSchema = new Schema(
   {
     boardName: String,
     budget: String,
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
     list: [{type: Schema.Types.ObjectId, ref:'Item'}],
     status: {type: String, enum:['Completed', 'Ongoing', "Not Started"]}
   },
@@ -15,7 +16,7 @@ const projectSchema = new Schema(
 );
 
 
-module.exports = model("Project", projectSchema);
+module.exports = model("Board", projectSchema);
 
 //board name, inspo-image(upload), supplies, cost
 //file upload cloundinary

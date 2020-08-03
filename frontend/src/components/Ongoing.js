@@ -4,7 +4,7 @@ class Ongoing extends Component {
     render() {
         return (
             <div>
-                
+                Ongoing
             </div>
         );
     }

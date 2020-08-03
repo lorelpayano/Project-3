@@ -8,12 +8,26 @@ import Profile from "./components/Profile";
 import actions from "./services/index";
 import GoogleAuth from "./components/auth/GoogleAuth";
 import GoogleAuthLogin from "./components/auth/GoogleAuthLogin";
+<<<<<<< HEAD
 import Completed from './components/Completed'
 import Ongoing from './components/Ongoing'
 import NotStarted from './components/NotStarted'
 // import Navbar from './components/Navbar'
 import './index.css'
 import Footer from "./components/Footer"
+=======
+import Completed from './components/Completed';
+import Ongoing from './components/Ongoing';
+import NotStarted from './components/NotStarted';
+// import Navbar from './components/Navbar';
+import './index.css';
+import About from './components/About';
+import GetInspired from './components/GetInspired';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CreateProject from './components/CreateProject'
+import DisplayProject from "./components/DisplayProject";
+
+>>>>>>> 2bdc1a99bc4814815da60f382768572f6cde4c12
 
 class App extends Component {
   state = {};
@@ -41,45 +55,54 @@ class App extends Component {
      
         {this.state.email}
 
-        <nav class='nav'>
+        <nav className='nav'>
         
-          <NavLink class='nav-links' to="/">Home</NavLink>
-          <NavLink class='nav-links' to="/about">About</NavLink>
-          <NavLink class='nav-links' to="">Get Inspired</NavLink>
-
-
+          <NavLink className='nav-links' to="/">Home</NavLink>
+          <NavLink className='nav-links' to="/about">About</NavLink>
+          <NavLink className='nav-links' to="/getinspired">Get Inspired</NavLink>
 
           {this.state.email ? (
             <Fragment>
-              <NavLink class='nav-links' onClick={this.logOut} to="/">Log Out</NavLink>
-              <NavLink class='nav-links' to="/profile">Profile</NavLink>
+              <NavLink className='nav-links' onClick={this.logOut} to="/">Log Out</NavLink>
+              <NavLink className='nav-links' to="/profile">Profile</NavLink>
             </Fragment>
           ) : (
             <Fragment>
-              <NavLink class='nav-links' to="/sign-up">Sign Up</NavLink>
-              <NavLink class='nav-links' to="/log-in">Log In</NavLink>
+              <NavLink className='nav-links' to="/sign-up">Sign Up</NavLink>
+              <NavLink className='nav-links' to="/log-in">Log In</NavLink>
             </Fragment>
           )}
         </nav>
 
 
+        <div style={{marginTop: '10vh'}}>
 
         <Switch>
           <Route exact path="/" render={(props) => <Home {...props} />} />
+          <Route exact path='/about' render={() => <About />}/>
+          <Route exact path='/getinspired' render={() => <GetInspired />}/>
           <Route exact path="/sign-up" render={(props) => <SignUp {...props} setUser={this.setUser} />}/>
           <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser} />}/>
           <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state} />}/>
-
-          <Route component={NotFound} />
           <Route exact path='/completed' render={() => <Completed />}/>
           <Route exact path='/ongoing' render={() => <Ongoing />}/>
           <Route exact path='/notstarted' render={() => <NotStarted />}/>
+          <Route exact path='/createproject' render={(props ) => <CreateProject  {...props}/>}/>
+          <Route exact path='/projects/:id' render={(props) => <DisplayProject {...props} />} />
+
+
+          <Route component={NotFound} />
 
         </Switch>
+
         {!this.state.email && <GoogleAuth setUser={this.setUser} />}
         {!this.state.email && <GoogleAuthLogin setUser={this.setUser} />}
+<<<<<<< HEAD
 
         {<Footer/>}
+=======
+            </div>
+>>>>>>> 2bdc1a99bc4814815da60f382768572f6cde4c12
       </BrowserRouter>
     );
   }
