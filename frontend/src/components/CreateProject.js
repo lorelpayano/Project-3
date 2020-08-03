@@ -58,7 +58,7 @@ handleSubmit = async e => {
     e.preventDefault();
     let project = await actions.createProject(this.state);
     console.log(project)
-    this.props.history.push(`/project/${project.data.project._id}/add`)
+    this.props.history.push(`/project/${project.data.project._id}`)
 }
 
 //ENDS HERE
@@ -68,7 +68,6 @@ handleSubmit = async e => {
     return (
       <div>
         <Cloudinary setUrl={this.setUrl}/>
-        <form class="create-new" onSubmit={this.handleSubmit}>
         <br />
         <label>Name:</label>
         <br />
@@ -106,6 +105,7 @@ handleSubmit = async e => {
             <option value='Not Started' >Not Started</option>
         </select>
         <br />
+        <form class="create-new" onSubmit={this.handleSubmit}>
         <button type="submit">Submit</button>
         </form>
 
