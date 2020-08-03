@@ -13,6 +13,7 @@ import Ongoing from './components/Ongoing'
 import NotStarted from './components/NotStarted'
 // import Navbar from './components/Navbar'
 import './index.css'
+import Footer from "./components/Footer"
 
 class App extends Component {
   state = {};
@@ -35,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-
+ 
       {/* <Navbar /> */}
      
         {this.state.email}
@@ -77,6 +78,8 @@ class App extends Component {
         </Switch>
         {!this.state.email && <GoogleAuth setUser={this.setUser} />}
         {!this.state.email && <GoogleAuthLogin setUser={this.setUser} />}
+
+        {<Footer/>}
       </BrowserRouter>
     );
   }

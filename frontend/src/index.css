@@ -21,10 +21,11 @@ code {
 }
 .main {
   height: 75vh;
-}
-.footer {
+}*/
+
+footer {
   height: 10vh;
-} */
+}
 
 .nav {
   padding: 10px 5px 0 0;
@@ -111,3 +112,6 @@ filter: grayscale(40%);
   border: 1px solid black;
   text-align: center;
 }
+
+/* Luis */
+
