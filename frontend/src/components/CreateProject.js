@@ -58,7 +58,7 @@ handleSubmit = async e => {
     e.preventDefault();
     let project = await actions.createProject(this.state);
     console.log(project)
-    this.props.history.push(`/project/${project.data.project._id}`)
+    this.props.history.push(`/projects/${project.data.project._id}`)
 }
 
 //ENDS HERE
