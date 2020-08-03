@@ -23,10 +23,11 @@ code {
 }
 .main {
   height: 75vh;
-}
-.footer {
+}*/
+
+footer {
   height: 10vh;
-} */
+}
 
 body {
   font-family: 'Lora', serif;
@@ -118,6 +119,10 @@ filter: grayscale(40%);
   height: 200px;
   /* border: 1px solid black; */
   text-align: center;
+}
+
+/* Luis */
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
