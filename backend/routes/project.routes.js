@@ -17,9 +17,14 @@ router.post('/projects/new', async (req, res, next) => {
     res.json({project})
 })
 
-router.post('/projects/:id/delete', async (req, res, next) => {
-    const project = await Project.findByIdAndDelete(req.params.id);
-    res.json({project})
+router.post('/projects/:id/delete', isAuth, async (req, res, next) => {
+    const project = await Project.findById(req.params.id);
+    if(project.user === req.user._id) {
+        const project = await Project.findByIdAndDelete(req.params.id);
+        res.json({project})
+    } else {
+        res.json({message: 'You are not authorized to delete this project'})
+    }
 })
 
 router.post('/projects/:id/edit', async (req, res, next) => {
