@@ -80,6 +80,7 @@ class App extends Component {
           <Route exact path='/notstarted' render={() => <NotStarted />}/>
           <Route exact path='/createproject' render={(props ) => <CreateProject  {...props}/>}/>
           <Route exact path='/projects/:id' render={(props) => <DisplayProject {...props} />} />
+          <Route exact path='' />
 
 
           <Route component={NotFound} />

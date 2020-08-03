@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../stylesheets/GetInspired.css'
 import Carousel from 'react-bootstrap/Carousel'
-import Bathroom from '../images/bC-Petersburg-Circle-Before-After-3.jpg'
+// import Bathroom from '../images/bC-Petersburg-Circle-Before-After-3.jpg'
 import Dining from '../images/Gosbee-dining.jpg'
 import Living from '../images/home-design.jpg'
 import Living2 from '../images/ACS_0045-2.jpg'
@@ -37,6 +37,8 @@ class GetInspired extends Component {
                             </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
+
+
             </div>
         );
     }

@@ -8,18 +8,18 @@ class Completed extends Component {
   };
 
   async componentDidMount() {
-    const res = await actions.getProjects();
+    const res = await actions.getProject();
     console.log(res);
     this.setState({
       projects: res.data.project,
     });
   }
 
-  displayProject(projects) {
+  displayProjects(projects) {
     return (
       <ul>
         {projects.map((b) => (
-          <li className='board-li'><Link className='board-link' key={b._id}>{`${b.name}: $${b.budget}`}</Link></li>
+          <li className='board-li'><Link className='board-link' to={`/projects/${b._id}`} key={b._id}>{`${b.name}: $${b.budget}`}</Link></li>
         ))}
       </ul>
     );
@@ -29,7 +29,7 @@ class Completed extends Component {
     return (
       <div>
         Completed Projects
-        {this.displayProject(
+        {this.displayProjects(
           this.state.projects.filter((b) => b.status === "Completed")
         )}
       </div>

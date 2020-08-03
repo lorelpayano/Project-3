@@ -24,9 +24,6 @@ const actions = {
   toUpload: async (image) => {
     return await service.post('/toupload', image)
   },
-  // createBoard: async (board) => {
-  //   return await service.post('/board/new', board)
-  // },
   getProject: async () => {
     return await service.get('/projects');
   },
