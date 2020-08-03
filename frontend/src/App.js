@@ -8,14 +8,7 @@ import Profile from "./components/Profile";
 import actions from "./services/index";
 import GoogleAuth from "./components/auth/GoogleAuth";
 import GoogleAuthLogin from "./components/auth/GoogleAuthLogin";
-<<<<<<< HEAD
-import Completed from './components/Completed'
-import Ongoing from './components/Ongoing'
-import NotStarted from './components/NotStarted'
-// import Navbar from './components/Navbar'
-import './index.css'
 import Footer from "./components/Footer"
-=======
 import Completed from './components/Completed';
 import Ongoing from './components/Ongoing';
 import NotStarted from './components/NotStarted';
@@ -27,7 +20,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CreateProject from './components/CreateProject'
 import DisplayProject from "./components/DisplayProject";
 
->>>>>>> 2bdc1a99bc4814815da60f382768572f6cde4c12
 
 class App extends Component {
   state = {};
@@ -98,12 +90,9 @@ class App extends Component {
 
         {!this.state.email && <GoogleAuth setUser={this.setUser} />}
         {!this.state.email && <GoogleAuthLogin setUser={this.setUser} />}
-<<<<<<< HEAD
 
-        {<Footer/>}
-=======
+        {/* {<Footer/>} */}
             </div>
->>>>>>> 2bdc1a99bc4814815da60f382768572f6cde4c12
       </BrowserRouter>
     );
   }
