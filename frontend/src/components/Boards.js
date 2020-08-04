@@ -22,16 +22,37 @@ class Boards extends Component {
       ongoing: "Ongoing",
     };
     const board = boards[this.props.location.pathname.slice(1)];
+
     return (
       <ul>
         {this.state.projects.filter((b) => b.status === board).map((b) => (
             <li className="board-li">
                 <Link className="board-link" to={`/projects/${b._id}`} key={b._id}>{`${b.name}: $${b.budget}`}</Link>
+
+                <button>Edit</button>
+                <button onClick = {() => this.deleteBoard(b._id)}>Delete</button>
             </li>
           ))}
       </ul>
     );
   }
+
+  deleteBoard = async id => {
+      let del = await actions.deleteProject(id);
+      console.log(del)
+      this.setState({
+        projects: this.state.projects.filter(p => p._id !== id)
+      })
+  }
+
+//   handleSubmit = async e => {
+//     e.preventDefault();
+//     let project = await actions.createProject(this.state);
+//     console.log(project)
+//     this.props.history.push(`/projects/${project.data.project._id}`)
+// }
+
+
 
   render() {
     return (

@@ -27,9 +27,14 @@ router.post('/projects/:id/delete', isAuth, async (req, res, next) => {
     }
 })
 
-router.post('/projects/:id/edit', async (req, res, next) => {
-    const project = await Project.findByIdAndUpdate(req.params.id, req.body, {new: true});
-    res.json({project})
+router.post('/projects/:id/edit', isAuth, async (req, res, next) => {
+    const project = await Project.findById(req.params.id);
+    if(project.user === req.user._id) {
+        const project = await Project.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        res.json({project})
+    } else {
+        res.json({message: 'You are not authorized to edit this project'})
+    }
 })
 
 module.exports = router

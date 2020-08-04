@@ -8,8 +8,16 @@ class CreateProject extends Component {
     supply: '',
     price: '',
     supplies: [],
-    images: []
+    images: [],
   };
+
+  async componentDidMount() {
+    let res = await actions.getProjects(this.props.match.params.id);
+    console.log(res)
+    this.setState({
+        ...res.data.project
+    })
+}
 
   changeHandler = (e) => {
     this.setState({
@@ -71,11 +79,11 @@ handleSubmit = async e => {
         <br />
         <label>Name:</label>
         <br />
-        <input type='text' name='name' onChange={this.changeHandler}/>
+        <input type='text' name='name' value={this.state.name} onChange={this.changeHandler}/>
         <br />
         <label>Budget</label>
         <br />
-        $ <input type='text' name='budget' onChange={this.changeHandler}/>
+        $ <input type='text' name='budget' value={this.state.budget} onChange={this.changeHandler}/>
         <br />
 
         <label>Supplies:</label>
@@ -84,22 +92,22 @@ handleSubmit = async e => {
         <br />
         <label>Price:</label>
         <br />
-        <input type="number" name="price" value={this.state.price}onChange={this.changeHandler} />
+        <input type="number" name="price" value={this.state.price} onChange={this.changeHandler} />
         <button onClick= {this.addSupplies}>Add</button>
         <br />
         {this.showSupplies()}
 
         <label>Links:</label>
         <br />
-        <input type="textfield" name="links" onChange={this.changeHandler} style={{ height: "100px", width: "500px" }}/>
+        <input type="textfield" name="links" value={this.state.links} onChange={this.changeHandler} style={{ height: "100px", width: "500px" }}/>
         <br />
         <label>Notes</label>
         <br />
-        <input type="textfield" name="notes" onChange={this.changeHandler} style={{ height: "100px", width: "500px" }}/>
+        <input type="textfield" name="notes" value={this.state.notes} onChange={this.changeHandler} style={{ height: "100px", width: "500px" }}/>
         <br />
         <label>Status:</label>
         <br />
-        <select name='status'onChange={this.changeHandler}>
+        <select name='status' value={this.state.status} onChange={this.changeHandler}>
             <option value='Completed' >Completed</option>
             <option value='Ongoing' >Ongoing</option>
             <option value='Not Started' >Not Started</option>
@@ -107,28 +115,7 @@ handleSubmit = async e => {
         <br />
         <form class="create-new" onSubmit={this.handleSubmit}>
         <button type="submit">Submit</button>
-        </form>
-
-        {/* <form class='create-new' onSubmit={this.handleSubmit}>
-                    <label>Board Name:</label>
-                    <br />
-                    <input type='text' name='boardName' onChange={this.selectHandler}/>
-                    <br />
-                    <label>Budget</label>
-                    <br />
-                    $ <input type='text' name='budget' onChange={this.selectHandler}/>
-                    <br />
-                    <label>Status:</label>
-                    <br />
-                    <select name='status'onChange={this.selectHandler}>
-                        <option value='Completed' >Completed</option>
-                        <option value='Ongoing' >Ongoing</option>
-                        <option value='Not Started' >Not Started</option>
-                    </select>
-                    <br />
-                    <button type='submit'>Submit</button>
-                </form> */}
-                
+        </form> 
       </div>
     );
   }
