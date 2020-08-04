@@ -121,7 +121,6 @@ filter: grayscale(40%);
   text-align: center;
 }
 
-/* Luis */
 .board-selector{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -144,7 +143,6 @@ filter: grayscale(40%);
 .board-link {
   text-decoration: none;
   color: black;
-
 }
 
 .board-li {
@@ -157,3 +155,9 @@ filter: grayscale(40%);
   padding: 20px;
   margin: 20px auto;
 }
+
+/* Luis */
+
+
+/*************footer End*****************/
+
