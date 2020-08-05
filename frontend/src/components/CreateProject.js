@@ -6,7 +6,8 @@ class CreateProject extends Component {
   state = {
     status: 'Completed',
     supply: '',
-    price: '',
+    price: 0,
+    sprice: '',
     supplies: [],
     images: [],
   };
@@ -35,15 +36,16 @@ class CreateProject extends Component {
   addSupplies = () => {
     const item = this.state.supply;
     const price = parseFloat(this.state.price)
-    const supplies = [...this.state.supplies, {item, price}]
-    this.setState({supplies, price: +this.state.price + price, supply: '', price: ''})
+    const sprice = parseInt(this.state.sprice);
+    const supplies = [...this.state.supplies, {item, price: sprice}]
+    this.setState({supplies, price: sprice + price, supply: '', sprice: ''})
   }
 
   showSupplies = () => {
       return (
           <ul>
               {this.state.supplies.map(item => <li key={item.item}>
-                {`${item.item }, total price: ${ item.price }`}
+                {`${item.item }, ${ item.price }`}
               </li>)}
               {this.state.images.map(img => (
                 <li key={img}>
@@ -92,7 +94,7 @@ handleSubmit = async e => {
         <br />
         <label>Price:</label>
         <br />
-        <input type="number" name="price" value={this.state.price} onChange={this.changeHandler} />
+        <input type="number" name="sprice" value={this.state.sprice} onChange={this.changeHandler} />
         <button onClick= {this.addSupplies}>Add</button>
         <br />
         {this.showSupplies()}

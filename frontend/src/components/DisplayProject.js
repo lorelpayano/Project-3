@@ -27,6 +27,9 @@ class DisplayProject extends Component {
         {this.state.project.links?.map((eachLink) => (
           <div className="project-details"><a href={eachLink} style={{textTransform:'lowercase', color:'black', textDecoration:'underline'}}>{eachLink}</a></div>
         ))}
+        <br />
+        <p>{this.state.project.notes}</p>
+        <p className='project-total'>Total Price: ${this.state.project.price}</p>
       </div>
     );
   }

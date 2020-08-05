@@ -158,9 +158,8 @@ filter: grayscale(40%);
   padding-top: 30px;
   /* text-transform:uppercase; */
   letter-spacing:2px
-
-
 }
+
 
 .board-selector a:hover {
   color:black;
@@ -173,11 +172,17 @@ filter: grayscale(40%);
   margin: 100px auto;
 }
 
-/* ********************* BOARDS ***************************** */
+/* ********************* BOARDS ************************ */
 
 .board-link {
   text-decoration: none;
   color: black;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.board-link a:hover {
+  color: red;
 }
 
 .board-li {
@@ -191,12 +196,20 @@ filter: grayscale(40%);
   padding: 40px 30px;
   margin: 20px auto;
   border-radius: 8%;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(240, 236, 236);
   text-align: center;
   text-transform: capitalize;
 }
 
+.edit-delete {
+  display: flex;
+  justify-content: space-evenly;
+  /* padding: 25px; */
+}
+
 /* ***************************************************** */
+
+/* ******************** INSPO ************************** */
 
 
 .inspo-heading1 {
@@ -211,7 +224,7 @@ filter: grayscale(40%);
   text-decoration: underline;
 }
 
-/* FOOTER */
+/* ************************ FOOTER ************************ */
 
 .site-footer {
   background-color:#26272b;
@@ -242,7 +255,7 @@ filter: grayscale(40%);
 } */
 
 .site-footer a:hover {
-  color: #79692d;
+  color: #a39255;
   text-decoration:none;
 }
 
@@ -260,7 +273,7 @@ filter: grayscale(40%);
 }
 
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover {
-  color: #79692d;
+  color: #a39255;
   text-decoration:none;
 }
 
@@ -412,13 +425,13 @@ filter: grayscale(40%);
   color: white;
 }
 
-/* FOOTER END */
+/************************** FOOTER END **********************************/
 
-/* *************************************************** */
 
-/* DISPLAY PROJECTS */
+/*********************** DISPLAY PROJECTS ******************************/
+
 .projects-page {
-min-height: 85vh;
+min-height: 90vh;
 margin: auto;
 text-align: center;
 /* display: flex;
@@ -450,8 +463,17 @@ padding: 0 0 20px 0;
   text-transform: capitalize;
 }
 
+.project-total {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  /* border-radius: 10%; */
+}
 
-/* PROJECTS END */
+
 /* *************************************************** */
 
 

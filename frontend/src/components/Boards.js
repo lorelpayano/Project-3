@@ -26,13 +26,14 @@ class Boards extends Component {
     return (
       <ul>
         {this.state.projects.filter((b) => b.status === board).map((b) => (
-            <li className="board-li">
-              <Link className="board-link" to={`/projects/${b._id}`} key={b._id}>{b.name}: <br />${b.budget}</Link>
-
-              <button>Edit</button>
+            <li className="board-li" key={b._id}>
+              <Link className="board-link" to={`/projects/${b._id}`} >{b.name}: <br />${b.budget}</Link>
+              <div className='edit-delete'>
+              <Link to={`/projects/${b._id}/edit`}><button>Edit</button></Link>
               {b.user === this.props.user._id && (
                 <button onClick={() => this.deleteBoard(b)}>Delete</button>
               )}
+              </div>
             </li>
           ))}
       </ul>

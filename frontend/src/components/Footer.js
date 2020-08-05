@@ -51,10 +51,10 @@ class Footer extends Component {
                                 <div className="col-md-4 col-sm-6 col-xs-12">
                                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                                     <ul className="social-icons">
-                                    <li><a href="www.facebook.com" className="fa fa-facebook"></a></li>
-                                    <li><a href="www.twitter.com" className="fa fa-twitter"></a></li>
-                                    <li><a href="www.instagram.com" className="fa fa-instagram"></a></li>
-                                    <li><a href="www.pinterest.com" className="fa fa-pinterest"></a></li>   
+                                    <li><a href="https://www.facebook.com" className="fa fa-facebook"></a></li>
+                                    <li><a href="https://www.twitter.com" className="fa fa-twitter"></a></li>
+                                    <li><a href="https://www.instagram.com" className="fa fa-instagram"></a></li>
+                                    <li><a href="https://www.pinterest.com" className="fa fa-pinterest"></a></li>   
                                     </ul>
                                 </div>
                             {/* </div> */}

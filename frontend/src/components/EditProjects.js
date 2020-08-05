@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import actions from "../services/index";
+import Cloudinary from "./Cloudinary";
+
 
 class EditProjects extends Component {
     state = {
@@ -8,19 +11,22 @@ class EditProjects extends Component {
         supplies: [],
         images: []
       };
-    
+
+      async componentDidMount() {
+        let res = await actions.getProjects(this.props.match.params.id);
+        console.log(res.data.project);
+        this.setState({
+          ...res.data.project,
+        });
+      }
+
+
       changeHandler = (e) => {
         this.setState({
           [e.target.name]: e.target.value,
         });
       };
     
-      handleSubmit = async (e) => {
-        e.preventDefault();
-        let project = await actions.createProject(this.state)
-        console.log(project)
-        // this.props.history.push(`/board/${this.props.match.params.id}`)
-      };
     
       addSupplies = () => {
         const item = this.state.supply;
@@ -28,21 +34,39 @@ class EditProjects extends Component {
         const supplies = [...this.state.supplies, {item, price}]
         this.setState({supplies, price: +this.state.price + price, supply: '', price: ''})
       }
-    
+      
+      deleteSupply = i => {
+        this.setState({
+          supplies: this.state.supplies.filter((_,ind) => i !== ind)
+        })
+      }
+
+      deleteImg = i => {
+        this.setState({
+          images: this.state.images.filter((_,ind) => i !== ind)
+        })
+      }
+
       showSupplies = () => {
           return (
               <ul>
-                  {this.state.supplies.map(item => <li key={item.item}>
-                    {`${item.item }, total price: ${ item.price }`}
+                  {this.state.supplies.map((item,i) => <li key={item.item}>
+                    {<>{`${item.item }, total price: ${ item.price }`}
+                    <button onClick={() => this.deleteSupply(i)}>X</button>
+                    </>}
                   </li>)}
-                  {this.state.images.map(img => (
+                  {this.state.images.map((img,i) => (
                     <li key={img}>
-                      {<img style= {{height: '50px'}}src = {img}/>}
+                      {<>
+                        <img style= {{height: '50px'}}src = {img}/>
+                      <button onClick={() => this.deleteImg(i)}>X</button> </>
+                      }
                     </li>
                   ))}
               </ul>
           )
       }
+
       setUrl = (url) => {
           this.setState({
               images: [...this.state.images, url]
@@ -51,7 +75,7 @@ class EditProjects extends Component {
         
     handleSubmit = async e => {
         e.preventDefault();
-        let project = await actions.createProject(this.state);
+        let project = await actions.editProject(this.state);
         console.log(project)
         this.props.history.push(`/projects/${project.data.project._id}`)
     }
@@ -64,11 +88,11 @@ class EditProjects extends Component {
         <br />
         <label>Name:</label>
         <br />
-        <input type='text' name='name' onChange={this.changeHandler}/>
+        <input type='text' name='name' value={this.state.name} onChange={this.changeHandler}/>
         <br />
         <label>Budget</label>
         <br />
-        $ <input type='text' name='budget' onChange={this.changeHandler}/>
+        $ <input type='text' name='budget' value={this.state.budger} onChange={this.changeHandler}/>
         <br />
 
         <label>Supplies:</label>
