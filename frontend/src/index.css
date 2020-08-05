@@ -99,7 +99,7 @@ body {
 /* HOME SECTION 1 */
 
 .section-home {
-background-image: url('./images//Gosbee-banner\ copy.jpg');
+background-image: url('/Gosbee-bannercopy.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 width: 100%;
