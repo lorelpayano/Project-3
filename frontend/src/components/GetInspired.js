@@ -1,37 +1,36 @@
 import React, { Component } from "react";
 import "../stylesheets/GetInspired.css";
 import Carousel from "react-bootstrap/Carousel";
-// import Bathroom from '.images/bC-Petersburg-Circle-Before-After-3.jpg'
-import Kitchen1 from "images/kitchen1.jpeg";
-import Kitchen2 from "images/kitchen2.jpg";
-import Kitchen3 from "images/kitchen3.jpg";
-import Kitchen4 from "images/kitchen4.jpeg";
-import Kitchen5 from "images/kitchen5.jpg";
-import LivingRoom1 from "images/livingroom1.jpg";
-import LivingRoom2 from "images/livingroom2.jpeg";
-import LivingRoom3 from "images/livingroom3.jpg";
-import LivingRoom4 from "images/livingroom4.jpg";
-import LivingRoom5 from "images/livingroom5.jpg";
-import DiningRoom1 from "images/diningroom1.jpg";
-import DiningRoom2 from "images/diningroom2.jpg";
-import DiningRoom3 from "images/diningroom3.jpg";
-import DiningRoom4 from "images/diningroom4.jpg";
-import DiningRoom5 from "images/diningroom5.jpg";
-import Bathroom1 from "images/bathroom1.jpg";
-import Bathroom2 from "images/bathroom2.jpg";
-import Bathroom3 from "images/bathroom3.jpg";
-import Bathroom4 from "images/bathroom4.jpg";
-import Bathroom5 from "images/bathroom5.jpg";
-import Patio1 from "images/patio1.jpg";
-import Patio2 from "images/patio2.jpg";
-import Patio3 from "images/patio3.jpg";
-import Patio4 from "images/patio4.png";
-import Patio5 from "images/patio5.jpg";
-import Entryway1 from "images/entryway1.jpeg";
-import Entryway2 from "images/entryway2.jpg";
-import Entryway3 from "images/entryway3.jpg";
-import Entryway4 from "images/entryway4.jpeg";
-import Entryway5 from "images/entryway5.jpg";
+// import Bathroom from '.bC-Petersburg-Circle-Before-After-3.jpg'\
+// import Kitchen2 from "kitchen2.jpg";
+// import Kitchen3 from "kitchen3.jpg";
+// import Kitchen4 from "kitchen4.jpeg";
+// import Kitchen5 from "kitchen5.jpg";
+// import LivingRoom1 from "livingroom1.jpg";
+// import LivingRoom2 from "livingroom2.jpeg";
+// import LivingRoom3 from "livingroom3.jpg";
+// import LivingRoom4 from "livingroom4.jpg";
+// import LivingRoom5 from "livingroom5.jpg";
+// import DiningRoom1 from "diningroom1.jpg";
+// import DiningRoom2 from "diningroom2.jpg";
+// import DiningRoom3 from "diningroom3.jpg";
+// import DiningRoom4 from "diningroom4.jpg";
+// import DiningRoom5 from "diningroom5.jpg";
+// import Bathroom1 from "bathroom1.jpg";
+// import Bathroom2 from "bathroom2.jpg";
+// import Bathroom3 from "bathroom3.jpg";
+// import Bathroom4 from "bathroom4.jpg";
+// import Bathroom5 from "bathroom5.jpg";
+// import Patio1 from "patio1.jpg";
+// import Patio2 from "patio2.jpg";
+// import Patio3 from "patio3.jpg";
+// import Patio4 from "patio4.png";
+// import Patio5 from "patio5.jpg";
+// import Entryway1 from "entryway1.jpeg";
+// import Entryway2 from "entryway2.jpg";
+// import Entryway3 from "entryway3.jpg";
+// import Entryway4 from "entryway4.jpeg";
+// import Entryway5 from "entryway5.jpg";
 
 // import Button from 'react-bootstrap/Button';
 // import { Button } from 'react-bootstrap';
@@ -47,7 +46,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Kitchen5}
+              src="kitchen5.jpg"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -60,7 +59,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Kitchen2}
+              src="kitchen2"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -73,7 +72,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Kitchen3}
+              src="kitchen3"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -86,7 +85,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Kitchen4}
+              src="kitchen4"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -99,7 +98,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Kitchen1}
+              src="kitchen1"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -118,7 +117,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={LivingRoom1}
+              src="livingroom1"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -131,7 +130,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={LivingRoom2}
+              src="livingroom2"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -144,7 +143,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={LivingRoom3}
+              src="livingroom3"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -157,7 +156,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={LivingRoom4}
+              src="livingroom4"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -170,7 +169,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={LivingRoom5}
+              src="livingroom5"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -189,7 +188,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={DiningRoom1}
+              src="diningroom5"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -202,7 +201,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={DiningRoom2}
+              src="diningroom2"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -215,7 +214,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={DiningRoom3}
+              src="diningroom3"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -228,7 +227,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={DiningRoom4}
+              src="diningroom4"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -241,7 +240,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={DiningRoom5}
+              src="diningroom1"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -260,7 +259,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Bathroom1}
+              src="bathroom1"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -273,7 +272,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Bathroom2}
+              src="bathroom2"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -286,7 +285,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Bathroom3}
+              src="bathroom3"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -299,7 +298,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Bathroom4}
+              src="bathroom4"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -312,7 +311,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Bathroom5}
+              src="bathroom5"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -331,7 +330,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Patio3}
+              src="patio3"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -344,7 +343,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Patio2}
+              src="patio2"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -357,7 +356,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Patio1}
+              src="patio1"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -370,7 +369,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Patio4}
+              src="patio4"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -383,7 +382,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Patio5}
+              src="patio5"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -402,7 +401,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Entryway2}
+              src="entryway2"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -415,7 +414,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Entryway1}
+              src="entryway1"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -428,7 +427,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Entryway3}
+              src="entryway3"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -441,7 +440,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Entryway4}
+              src="entryway4"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -454,7 +453,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={Entryway5}
+              src="entryway5"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
