@@ -27,7 +27,7 @@ class SignUp extends Component {
 
 
 
-                <div id="login-box">
+                {/* <div id="login-box">
   <div class="left">
     <h1>Sign up</h1>
     
@@ -47,7 +47,7 @@ class SignUp extends Component {
     <button class="social-signin google">Log in with Google+</button>
   </div>
   <div class="or">OR</div>
-</div>
+</div> */}
             </Fragment>
         );
     }
