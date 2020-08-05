@@ -25,15 +25,9 @@ class Boards extends Component {
 
     return (
       <ul>
-        {this.state.projects
-          .filter((b) => b.status === board)
-          .map((b) => (
+        {this.state.projects.filter((b) => b.status === board).map((b) => (
             <li className="board-li">
-              <Link
-                className="board-link"
-                to={`/projects/${b._id}`}
-                key={b._id}
-              >{`${b.name}: $${b.budget}`}</Link>
+              <Link className="board-link" to={`/projects/${b._id}`} key={b._id}>{b.name}: <br />${b.budget}</Link>
 
               <button>Edit</button>
               {b.user === this.props.user._id && (
@@ -62,7 +56,11 @@ class Boards extends Component {
   // }
 
   render() {
-    return <div>{this.displayProjects()}</div>;
+    return <div style={{minHeight:'85vh'}}>
+
+    {this.displayProjects()}
+    
+    </div>;
   }
 }
 

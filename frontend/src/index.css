@@ -173,6 +173,8 @@ filter: grayscale(40%);
   margin: 100px auto;
 }
 
+/* ********************* BOARDS ***************************** */
+
 .board-link {
   text-decoration: none;
   color: black;
@@ -182,12 +184,20 @@ filter: grayscale(40%);
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid black;
-  width: 200px;
-  height: 150px;
-  padding: 20px;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(95, 95, 95, 0.5);
+  width: 300px;
+  height: 180px;
+  padding: 40px 30px;
   margin: 20px auto;
+  border-radius: 8%;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+  text-transform: capitalize;
 }
+
+/* ***************************************************** */
+
 
 .inspo-heading1 {
   text-align: center;
@@ -409,15 +419,35 @@ filter: grayscale(40%);
 /* DISPLAY PROJECTS */
 .projects-page {
 min-height: 85vh;
+margin: auto;
+text-align: center;
+/* display: flex;
+flex-direction: column;
+justify-content: space-evenly; */
+}
+
+.project-name {
+  font-size: 20px;
+  text-decoration: underline;
+  text-transform: capitalize;
+  padding-top: 20px;
 }
 
 .project-image {
-width: 100px;
+width: 40%;
+margin: 0 auto;
+border-radius: 9%;
+padding: 0 0 20px 0;
 }
 
 .project-details {
-  text-align: center;
-  border: 1px solid red;
+  margin: auto;
+  /* text-align: center; */
+  /* border: 1px solid red; */
+  width: 500px;
+  padding: 5px;
+  word-wrap: break-word;
+  text-transform: capitalize;
 }
 
 

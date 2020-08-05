@@ -8,7 +8,7 @@ const Profile = (props) => {
   }
 
   return (
-    <div style={{height:'85vh'}}>
+    <div style={{minHeight:'85vh'}}>
         <div className="welcome">
           <h3>Welcome {props.user.name}</h3>
         </div>
