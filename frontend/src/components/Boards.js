@@ -25,41 +25,44 @@ class Boards extends Component {
 
     return (
       <ul>
-        {this.state.projects.filter((b) => b.status === board).map((b) => (
+        {this.state.projects
+          .filter((b) => b.status === board)
+          .map((b) => (
             <li className="board-li">
-                <Link className="board-link" to={`/projects/${b._id}`} key={b._id}>{`${b.name}: $${b.budget}`}</Link>
+              <Link
+                className="board-link"
+                to={`/projects/${b._id}`}
+                key={b._id}
+              >{`${b.name}: $${b.budget}`}</Link>
 
-                <button>Edit</button>
-                <button onClick = {() => this.deleteBoard(b._id)}>Delete</button>
+              <button>Edit</button>
+              {b.user === this.props.user._id && (
+                <button onClick={() => this.deleteBoard(b)}>Delete</button>
+              )}
             </li>
           ))}
       </ul>
     );
   }
 
-  deleteBoard = async id => {
-      let del = await actions.deleteProject(id);
-      console.log(del)
+  deleteBoard = async (proj) => {
+    let del = await actions.deleteProject(proj._id);
+    console.log(del.data);
+    if (del.data.project)
       this.setState({
-        projects: this.state.projects.filter(p => p._id !== id)
-      })
-  }
+        projects: this.state.projects.filter((p) => p._id !== proj._id),
+      });
+  };
 
-//   handleSubmit = async e => {
-//     e.preventDefault();
-//     let project = await actions.createProject(this.state);
-//     console.log(project)
-//     this.props.history.push(`/projects/${project.data.project._id}`)
-// }
-
-
+  //   handleSubmit = async e => {
+  //     e.preventDefault();
+  //     let project = await actions.createProject(this.state);
+  //     console.log(project)
+  //     this.props.history.push(`/projects/${project.data.project._id}`)
+  // }
 
   render() {
-    return (
-      <div>
-        {this.displayProjects()}
-      </div>
-    );
+    return <div>{this.displayProjects()}</div>;
   }
 }
 

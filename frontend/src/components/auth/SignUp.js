@@ -10,6 +10,7 @@ class SignUp extends Component {
     handleSubmit =  e => {
         e.preventDefault()
             actions.signUp(this.state).then(user=> {
+                console.log(user.data)
                 this.props.setUser({...user.data})  
             }).catch(({ response }) => console.error(response.data));
     }
@@ -18,6 +19,7 @@ class SignUp extends Component {
             <Fragment>
                 <h2>SignUP</h2>
                 <form onSubmit={this.handleSubmit}>
+                    <input name="name" type="text" onChange={this.handleChange} />
                     <input name="email" type="email" onChange={this.handleChange} />
                     <input name="password" type="password" onChange={this.handleChange} />
                     <input type="submit" value="Sign Up"/>
