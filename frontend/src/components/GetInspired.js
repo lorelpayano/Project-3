@@ -59,7 +59,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="kitchen2"
+              src="kitchen2.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -72,7 +72,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="kitchen3"
+              src="kitchen3.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -85,7 +85,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="kitchen4"
+              src="kitchen4.jpeg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -98,7 +98,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="kitchen1"
+              src="kitchen1.jpeg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -117,7 +117,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="livingroom1"
+              src="livingroom1.jpg"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -130,7 +130,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="livingroom2"
+              src="livingroom2.jpeg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -143,7 +143,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="livingroom3"
+              src="livingroom3.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -156,7 +156,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="livingroom4"
+              src="livingroom4.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -169,7 +169,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="livingroom5"
+              src="livingroom5.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -188,7 +188,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="diningroom5"
+              src="diningroom5.jpg"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -201,7 +201,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="diningroom2"
+              src="diningroom2.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -214,7 +214,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="diningroom3"
+              src="diningroom3.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -227,7 +227,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="diningroom4"
+              src="diningroom4.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -240,7 +240,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="diningroom1"
+              src="diningroom1.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -259,7 +259,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="bathroom1"
+              src="bathroom1.jpg"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -272,7 +272,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="bathroom2"
+              src="bathroom2.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -285,7 +285,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="bathroom3"
+              src="bathroom3.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -298,7 +298,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="bathroom4"
+              src="bathroom4.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -311,7 +311,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="bathroom5"
+              src="bathroom5.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -330,7 +330,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="patio3"
+              src="patio3.jpg"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -343,7 +343,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="patio2"
+              src="patio2.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -356,7 +356,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="patio1"
+              src="patio1.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -369,7 +369,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="patio4"
+              src="patio4.png"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -382,7 +382,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="patio5"
+              src="patio5.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -401,7 +401,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="entryway2"
+              src="entryway2.jpg"
               alt="First slide"
               style={{ height: "75vh" }}
             />
@@ -414,7 +414,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="entryway1"
+              src="entryway1.jpeg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -427,7 +427,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="entryway3"
+              src="entryway3.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -440,7 +440,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="entryway4"
+              src="entryway4.jpeg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
@@ -453,7 +453,7 @@ class GetInspired extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="entryway5"
+              src="entryway5.jpg"
               alt="Third slide"
               style={{ height: "75vh" }}
             />
