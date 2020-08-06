@@ -83,20 +83,50 @@
   color: #79692d;
   text-decoration: none;
   letter-spacing:1px;
-  font-size: 12px;
+  font-size: 9px;
   /* width: 10px; */
 }
+
+/************************** HOME PAGE ******************************/
 
 .section-home {
   background-image: url('/gosbeekitchen.jpg') !important;
   background-repeat: no-repeat;
   background-size: contain !important;
   width: 100%;
-  height: 85vh;
+  height: 55vh !important;
   padding: 10px;
   /* margin: 3% auto 0 auto; */
   filter: grayscale(40%);
   }
+
+  .home-box {
+    background: rgb(31, 30, 30);
+    color: white;
+    width: 35%;
+    margin: 55px 101px !important;
+    height: 65px !important;
+    border-radius: 3%;
+    text-align: center;
+    opacity: 0.6 !important;
+    z-index: 0;
+    font-size: 7px !important;
+    /* font-weight: bold; */
+    letter-spacing: 2px;
+  }
+  
+  .home-text {
+    /* text-align: center; */
+    margin: 20% auto;
+  }
+
+  .logo {
+    width: 60px !important;
+    padding-bottom: 5px !important;
+  }
+
+    /* *************************************************** */
+
 
 .about-us {
     /* text-align: center; */
@@ -232,10 +262,63 @@ h1 {
 
 /*************************** LOGIN *******************************/
 
+/*********************** DISPLAY PROJECTS ******************************/
+
+.projects-page {
+  min-height: 90vh;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  font-size: 14px !important;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; */
+  }
+  
+  .project-name {
+    font-size: 18px !important;
+    text-decoration: underline;
+    text-transform: capitalize;
+    padding-top: 20px;
+  }
+  
+  .project-image {
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 9%;
+  padding: 0 0 20px 0;
+  }
+  
+  .project-details {
+    margin: auto;
+    text-align: center !important;
+    /* border: 1px solid red; */
+    width: 100% !important;
+    padding: 5px;
+    word-wrap: break-word;
+    text-transform: capitalize;
+  
+  }
+  
+  .project-total {
+    font-size: 16px !important;
+    font-weight: bold;
+    border: 1px solid black;
+    width: 180px !important;
+    margin: 15% auto !important;
+    padding: 5px !important;
+    /* border-radius: 10%; */
+  }
+  /* *************************************************** */
+
+  
 
 }
 
 /* *************************** END MAX-WIDTH 600 *********************************** */
+
+
+
 
 
 
@@ -280,8 +363,8 @@ body {
 }
 
 .nav {
-  height: 6vh;
-  padding: 10px 5px 0 0;
+  height: 7vh;
+  padding: 13px 5px 0 0;
   width: 100%;
   position: fixed;
   top: 0;
@@ -337,7 +420,12 @@ body {
   text-decoration: underline;
 }
 
-/* HOME SECTION 1 */
+.logo {
+  width: 80px;
+  padding: 0;
+}
+
+/***************** HOME SECTION 1 *****************/
 
 .section-home {
 background-image: url('/Gosbee-bannercopy.jpg');
@@ -350,7 +438,27 @@ padding: 10px;
 filter: grayscale(40%);
 }
 
-/* PROFILE SECTION 1 */
+.home-box {
+  background: rgb(31, 30, 30);
+  color: white;
+  width: 35%;
+  margin: 17% auto;
+  height: 27%;
+  border-radius: 3%;
+  text-align: center;
+  opacity: 0.9;
+  z-index: 0;
+  font-size: 25px;
+  /* font-weight: bold; */
+  letter-spacing: 2px;
+}
+
+.home-text {
+  /* text-align: center; */
+  margin: 20% auto;
+}
+
+/***************** PROFILE SECTION 1 ****************/
 
 .section-profile {
   width: 60%;
@@ -450,20 +558,7 @@ filter: grayscale(40%);
 
 /* ***************************************************** */
 
-/* ******************** INSPO ************************** */
 
-
-.inspo-heading1 {
-  text-align: center;
-  padding: 5px 5px 15px 5px;
-  text-decoration: underline;
-}
-
-.inspo-heading {
-  text-align: center;
-  padding: 30px 5px 15px 5px;
-  text-decoration: underline;
-}
 
 /* ************************ FOOTER ************************ */
 
@@ -676,6 +771,7 @@ filter: grayscale(40%);
 min-height: 90vh;
 margin: auto;
 text-align: center;
+width: 100%;
 /* display: flex;
 flex-direction: column;
 justify-content: space-evenly; */
@@ -703,6 +799,7 @@ padding: 0 0 20px 0;
   padding: 5px;
   word-wrap: break-word;
   text-transform: capitalize;
+
 }
 
 .project-total {
@@ -922,6 +1019,17 @@ button.social-signin.google {
   padding: 20px;
 }
 
+.inspo-heading1 {
+  text-align: center;
+  padding: 25px 5px 15px 5px;
+  text-decoration: underline;
+}
+
+.inspo-heading {
+  text-align: center;
+  padding: 30px 5px 15px 5px;
+  text-decoration: underline;
+}
 
 
 

@@ -7,9 +7,17 @@ class Home extends Component {
   render() {
     return (
       <div>
-      <section class='section-home'>
-
-      </section>
+        <section class='section-home'>
+          <div className='home-box'>
+            <p className='home-text'>
+            "Be faithful to your own taste, because nothing you really like is ever out of style."
+            <br />
+            - Billy Baldwin
+            </p>
+            
+          </div>
+        </section>
+        <div style={{height:'40px'}}></div>
         
       </div>
     );
