@@ -16,6 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CreateProject from "./components/CreateProject";
 import DisplayProject from "./components/DisplayProject";
 import ScrollToTop from './components/HOC/ScrollToTop'
+import EditProjects from './components/EditProjects'
 
 class App extends Component {
   state = {};
@@ -32,12 +33,6 @@ class App extends Component {
     let res = await actions.logOut();
     this.setUser({ email: null, createdAt: null, updatedAt: null, _id: null }); //FIX
   };
-
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0)
-    }
-  }
   
   render() {
     return (
@@ -92,7 +87,7 @@ class App extends Component {
             <Route exact path="/notstarted" render={(props) => <Boards {...props} user={this.state} />} />
             <Route exact path="/createproject" render={(props) => <CreateProject {...props} />}/>
             <Route exact path="/projects/:id" render={(props) => <DisplayProject {...props} />}/>
-            <Route exact path="" />
+            <Route exact path="/projects/:id/edit" render={(props) => <EditProjects {...props} />}/>
 
             <Route component={NotFound} />
           </Switch>

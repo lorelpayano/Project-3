@@ -11,7 +11,7 @@ class Footer extends Component {
                             <div className="row">
                                 <div className="col-sm-12 col-md-6">
                                     <h6>About</h6>
-                                    <p className="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+                                    <p className="text-justify">TRUreno is a project planner that helps you plan your home renovations accordingly. You can input your budget and individually add each product that will be needed as well as its cost. You can have as many boards as you want and they are separated into different boards: Completed, Ongoing, or Not Started.</p>
                                 </div>
 
                                 <div className="col-xs-6 col-md-3">
@@ -51,10 +51,10 @@ class Footer extends Component {
                                 <div className="col-md-4 col-sm-6 col-xs-12">
                                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                                     <ul className="social-icons">
-                                    <li><a href="www.facebook.com" className="fa fa-facebook"></a></li>
-                                    <li><a href="www.twitter.com" className="fa fa-twitter"></a></li>
-                                    <li><a href="www.instagram.com" className="fa fa-instagram"></a></li>
-                                    <li><a href="www.pinterest.com" className="fa fa-pinterest"></a></li>   
+                                    <li><a href="https://www.facebook.com" className="fa fa-facebook"></a></li>
+                                    <li><a href="https://www.twitter.com" className="fa fa-twitter"></a></li>
+                                    <li><a href="https://www.instagram.com" className="fa fa-instagram"></a></li>
+                                    <li><a href="https://www.pinterest.com" className="fa fa-pinterest"></a></li>   
                                     </ul>
                                 </div>
                             {/* </div> */}

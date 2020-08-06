@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import actions from '../../services/index'
-import GoogleAuth from "./GoogleAuth";
-import GoogleAuthLogin from "./GoogleAuthLogin";
+
 
 
 class LogIn extends Component {
@@ -29,8 +28,7 @@ class LogIn extends Component {
                 </form>
 
 
-        {<GoogleAuth setUser={this.props.setUser} />}
-        {<GoogleAuthLogin setUser={this.props.setUser} />}
+
 
             </div>
             </Fragment>

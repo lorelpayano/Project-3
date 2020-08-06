@@ -39,12 +39,14 @@ class GetInspired extends Component {
   render() {
     return (
       <div>
+
         <h2 className="inspo-heading1" id="kitchens">
           Kitchens
         </h2>
-        <Carousel style={{ width: "70%", margin: "auto" }}>
+
+        <Carousel className='get-inspired'>
           <Carousel.Item>
-            <img className="d-block w-100" src="kitchen5.jpg" alt="First slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="kitchen5.jpg" alt="First slide"/>
             <Carousel.Caption>
               {/* <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
@@ -52,7 +54,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="kitchen2.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="kitchen2.jpg" alt="Third slide"/>
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -60,7 +62,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="kitchen3.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="kitchen3.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -68,7 +70,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="kitchen4.jpeg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="kitchen4.jpeg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -76,7 +78,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="kitchen1.jpeg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="kitchen1.jpeg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -88,17 +90,17 @@ class GetInspired extends Component {
           Living Rooms
         </h2>
 
-        <Carousel style={{ width: "70%", margin: "auto" }}>
+        <Carousel className='get-inspired'>
           <Carousel.Item>
-            <img className="d-block w-100" src="livingroom1.jpg" alt="First slide" style={{ height: "80vh" }}/>
-            <Carousel.Caption style={{ color: "black" }}>
+            <img className="inspire-image" src="livingroom1.jpg" alt="First slide" />
+            <Carousel.Caption>
               {/* <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="livingroom2.jpeg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="livingroom2.jpeg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -106,7 +108,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="livingroom3.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="livingroom3.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -114,7 +116,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="livingroom4.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="livingroom4.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -122,7 +124,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="livingroom5.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="livingroom5.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -134,17 +136,17 @@ class GetInspired extends Component {
           Dining Rooms
         </h2>
 
-        <Carousel style={{ width: "70%", margin: "auto" }}>
+        <Carousel className='get-inspired'>
           <Carousel.Item>
-            <img className="d-block w-100" src="diningroom5.jpg" alt="First slide" style={{ height: "80vh" }}/>
-            <Carousel.Caption style={{ color: "black" }}>
+            <img className="inspire-image" src="diningroom5.jpg" alt="First slide" />
+            <Carousel.Caption>
               {/* <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="diningroom2.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="diningroom2.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -152,7 +154,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="diningroom3.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="diningroom3.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -160,7 +162,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="diningroom4.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="diningroom4.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -168,7 +170,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="diningroom1.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="diningroom1.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -180,17 +182,17 @@ class GetInspired extends Component {
           Bathrooms
         </h2>
 
-        <Carousel style={{ width: "70%", margin: "auto" }}>
+        <Carousel className='get-inspired'>
           <Carousel.Item>
-            <img className="d-block w-100" src="bathroom1.jpg" alt="First slide" style={{ height: "80vh" }}/>
-            <Carousel.Caption style={{ color: "black" }}>
+            <img className="inspire-image" src="bathroom1.jpg" alt="First slide" />
+            <Carousel.Caption>
               {/* <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="bathroom2.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="bathroom2.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -198,7 +200,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="bathroom3.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="bathroom3.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -206,7 +208,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="bathroom4.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="bathroom4.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -214,7 +216,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="bathroom5.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="bathroom5.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -226,17 +228,17 @@ class GetInspired extends Component {
           Patios
         </h2>
 
-        <Carousel style={{ width: "70%", margin: "auto" }}>
+        <Carousel className='get-inspired'>
           <Carousel.Item>
-            <img className="d-block w-100" src="patio3.jpg" alt="First slide" style={{ height: "80vh" }}/>
-            <Carousel.Caption style={{ color: "black" }}>
+            <img className="inspire-image" src="patio3.jpg" alt="First slide" />
+            <Carousel.Caption>
               {/* <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="patio2.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="patio2.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -244,7 +246,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="patio1.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="patio1.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -252,7 +254,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="patio4.png" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="patio4.png" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -260,7 +262,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="patio5.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="patio5.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -272,17 +274,17 @@ class GetInspired extends Component {
           Entryways
         </h2>
 
-        <Carousel style={{ width: "70%", margin: "auto" }}>
+        <Carousel className='get-inspired'>
           <Carousel.Item>
-            <img className="d-block w-100" src="entryway2.jpg" alt="First slide" style={{ height: "80vh" }}/>
-            <Carousel.Caption style={{ color: "black" }}>
+            <img className="inspire-image" src="entryway2.jpg" alt="First slide" />
+            <Carousel.Caption>
               {/* <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="entryway1.jpeg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="entryway1.jpeg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -290,7 +292,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="entryway3.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="entryway3.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -298,7 +300,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="entryway4.jpeg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="entryway4.jpeg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
@@ -306,7 +308,7 @@ class GetInspired extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="entryway5.jpg" alt="Third slide" style={{ height: "80vh" }}/>
+            <img className="inspire-image" src="entryway5.jpg" alt="Third slide" />
             <Carousel.Caption>
               {/* <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
