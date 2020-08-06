@@ -43,6 +43,7 @@ class App extends Component {
         {this.state.email}
 
         <nav className="nav">
+        <img src='logo.png' className='logo'/>
           <NavLink className="nav-links" to="/">
             Home
           </NavLink>

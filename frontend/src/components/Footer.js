@@ -17,12 +17,12 @@ class Footer extends Component {
                                 <div className="col-xs-6 col-md-3">
                                     <h6>CATEGORIES</h6>
                                     <ul className="footer-links">
-                                    <li><a href="/getinspired/#kitchens">Kitchens</a></li>
-                                    <li><a href="/getinspired/#livingrooms">Living Rooms</a></li>
-                                    <li><a href="/getinspired/#diningrooms">Dining Rooms</a></li>
-                                    <li><a href="/getinspired/#bathrooms">Bathrooms</a></li>
-                                    <li><a href="/getinspired/#patios">Patios</a></li>
-                                    <li><a href="/getinspired/#entryways">Entryways</a></li>
+                                    <li><Link to="/getinspired/#kitchens">Kitchens</Link></li>
+                                    <li><Link to="/getinspired/#livingrooms">Living Rooms</Link></li>
+                                    <li><Link to="/getinspired/#diningrooms">Dining Rooms</Link></li>
+                                    <li><Link to="/getinspired/#bathrooms">Bathrooms</Link></li>
+                                    <li><Link to="/getinspired/#patios">Patios</Link></li>
+                                    <li><Link to="/getinspired/#entryways">Entryways</Link></li>
                                     </ul>
                                 </div>
 
