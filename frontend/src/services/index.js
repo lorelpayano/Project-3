@@ -36,8 +36,8 @@ const actions = {
   deleteProject: async (id) => {
     return await service.post(`projects/${id}/delete`);
   },
-  editProject: async (id, data) => {
-    return await service.post(`/projects/${id}/edit`, data);
+  editProject: async (data) => {
+    return await service.post(`/projects/${data._id}/edit`, data);
   },
 };
 

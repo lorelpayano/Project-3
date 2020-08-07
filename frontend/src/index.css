@@ -57,7 +57,44 @@
   /* text-decoration: none; */
 }
 
-/* LOGIN */
+/* ********************* BOARDS ************************ */
+
+.board-link {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.board-link a:hover {
+  color: red;
+}
+
+.board-li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(95, 95, 95, 0.5);
+  width: 40vh !important;
+  height: 30vh !important;
+  padding: 40px 30px;
+  margin: 20px auto;
+  border-radius: 8%;
+  background-color: rgb(240, 236, 236);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.edit-delete {
+  display: flex;
+  justify-content: space-evenly;
+  /* padding: 25px; */
+}
+
+/* ***************************************************** */
+
+/************************* LOGIN ************************/
 
 .login {
   margin: 100px auto;
@@ -66,7 +103,7 @@
 .nav {
   height: 6vh;
   padding: 10px 5px 0 0;
-  width: 100%;
+  width: 80vh;
   position: fixed;
   top: 0;
   display: flex;
@@ -90,9 +127,10 @@
 /************************** HOME PAGE ******************************/
 
 .section-home {
-  background-image: url('/gosbeekitchen.jpg') !important;
+  background-image: url('/gosbee-kitchen1.jpg') !important;
   background-repeat: no-repeat;
-  background-size: contain !important;
+  background-size: cover !important;
+  background-position: center;
   width: 100%;
   height: 55vh !important;
   padding: 10px;
@@ -103,8 +141,8 @@
   .home-box {
     background: rgb(31, 30, 30);
     color: white;
-    width: 35%;
-    margin: 55px 101px !important;
+    width: 100px !important;
+    /* margin: 8vh 20vh !important; */
     height: 65px !important;
     border-radius: 3%;
     text-align: center;
@@ -131,11 +169,20 @@
 .about-us {
     /* text-align: center; */
     width: 80% !important;
-    margin: 9% auto;
+    margin: 9% auto !important;
     min-height: 40vh;
     /* color: #79692d; */
     font-weight: bold;
     font-size: 10px;
+  }
+
+  .about-heading {
+    font-size: 30px;
+    text-decoration: underline;
+    color: black;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 18% !important;
   }
 
   /* ************************ FOOTER ************************ */
@@ -183,7 +230,7 @@
 
 .inspo-heading1 {
   text-align: center;
-  padding: 5px 5px 10px 5px !important;
+  padding: 15px 5px 10px 5px !important;
   text-decoration: underline;
   font-size: 20px !important;
 }
@@ -202,7 +249,7 @@
   position: relative;
   margin: 8% auto !important;
   width: 90% !important;
-  height: 520px !important;
+  height: 75vh !important;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -223,7 +270,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   line-height: 20px;
   text-align: center;
-  margin: 65% -150px !important;
+  margin: 50% -160px !important;
 }
 
 .right {
@@ -238,10 +285,9 @@
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;
-  margin: 130% auto !important;
+  margin: 120% auto !important;
 
 }
-
 
 .left {
   position: absolute;
@@ -283,10 +329,18 @@ h1 {
   }
   
   .project-image {
-  width: 30%;
+  width: 30vh !important;
+  height: 40vh !important;
   margin: 0 auto;
   border-radius: 9%;
   padding: 0 0 20px 0;
+  }
+
+  .image-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 0 !important;
   }
   
   .project-details {
@@ -310,6 +364,63 @@ h1 {
     /* border-radius: 10%; */
   }
   /* *************************************************** */
+
+  /* ***************** CREATE PROJECT ***************** */
+
+  .create-project{
+    text-align: center;
+    margin: auto !important;
+    min-height: 45vh !important;
+    /* border: 1px solid black; */
+    width: 80% !important;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-options {
+    text-align: center;
+    list-style-type: none;
+    /* display: flex;
+    flex-direction: column;
+    align-content: center; */
+    width: 10vh;
+  
+  }
+  
+  .create-inputs {
+    text-align: center;
+    margin: auto;
+    line-height: 5px;
+    list-style-type: none;
+    padding: 0;
+    width: 25vh !important;
+  }
+  
+  .create-labels {
+    height: 0px;
+    padding: 0;
+    width: 25vh !important;
+  
+  }
+  
+  .create-new {
+    text-align: center;
+    margin: 30px auto !important;
+  }
+
+  .create-heading {
+    text-align: center;
+    margin-top: 4%;
+    font-size: 3vh;
+  }
+
+  .cloudinary {
+    width: 45vh !important;
+    margin: 15px 0;
+    text-align: center;
+  }
+
+    /* ***************** END CREATE PROJECT ***************** */
 
   
 
@@ -441,14 +552,14 @@ filter: grayscale(40%);
 .home-box {
   background: rgb(31, 30, 30);
   color: white;
-  width: 35%;
+  width: 60vh;
   margin: 17% auto;
-  height: 27%;
+  height: 18vh;
   border-radius: 3%;
   text-align: center;
   opacity: 0.9;
   z-index: 0;
-  font-size: 25px;
+  font-size: 3vh;
   /* font-weight: bold; */
   letter-spacing: 2px;
 }
@@ -496,10 +607,7 @@ filter: grayscale(40%);
   margin: 70px auto;
 } */
 
-.create-new {
-  text-align: center;
-  margin: 100px auto;
-}
+
 
 .profile-links {
   color: #79692d;
@@ -785,10 +893,17 @@ justify-content: space-evenly; */
 }
 
 .project-image {
-width: 30%;
+width: 50vh;
+height:50vh;
 margin: 0 auto;
-border-radius: 9%;
+border-radius: 4%;
 padding: 0 0 20px 0;
+}
+
+.image-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50vh;
 }
 
 .project-details {
@@ -852,7 +967,7 @@ body {
   left: 0;
   box-sizing: border-box;
   padding: 40px;
-  width: 300px;
+  width: 40%;
   height: 400px;
 }
 
@@ -1027,10 +1142,65 @@ button.social-signin.google {
 
 .inspo-heading {
   text-align: center;
-  padding: 30px 5px 15px 5px;
+  padding: 60px 5px 15px 5px;
   text-decoration: underline;
+  margin-top: 20px;
+}
+/* **************** END - GET INSPIRED *********************** */
+
+
+/* **************** CREATE-PROJECT *********************** */
+
+.create-project{
+  text-align: center;
+  margin: 5vh 50vh;
+  min-height: 65vh;
+  /* border: 1px solid black; */
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
 }
 
+.create-options {
+  text-align: center;
+  list-style-type: none;
+  /* display: flex;
+  flex-direction: column;
+  align-content: center; */
+  width: 40vh;
 
+}
 
-/* **************** END - GET INSPIRED *********************** */
+.create-inputs {
+  text-align: center;
+  margin: auto;
+  line-height: 5px;
+  list-style-type: none;
+  padding: 0;
+  width: 10vh;
+}
+
+.create-labels {
+  height: 0px;
+  padding: 0;
+  width: 20vh;
+
+}
+
+.create-new {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.create-heading {
+  text-align: center;
+  margin-top: 4%;
+}
+
+.cloudinary {
+  width: 65vh;
+  margin: 15px;
+  text-align: center;
+
+}

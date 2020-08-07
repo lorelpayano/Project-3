@@ -10,7 +10,7 @@ console.log(process.env)
 var storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   folder: 'Project3', // The name of the folder in cloudinary
-  allowedFormats: ['jpg', 'png'],
+  allowedFormats: ['jpg', 'png', 'heic'],
   filename: function (req, file, cb) {
       console.log(file)
     cb(null, file.originalname); // The file on cloudinary would have the same name as the original file name

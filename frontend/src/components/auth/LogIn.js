@@ -31,14 +31,14 @@ class LogIn extends Component {
             </div> */}
 
 
-            <div id="login-box" style={{width:'20%'}}>
+            <div id="login-box" style={{width:'50vh'}}>
                     <div class="left">
                         <h1>LogIn</h1>
-                        
+                        <br />
                         <form onSubmit={this.handleSubmit}>
-                        <input type="text" name="name" placeholder="Email" onChange={this.handleChange} />
+                        <input type="text" name="name" placeholder="Email" onChange={this.handleChange} style={{width:'30vh'}} />
                         {/* <input type="email" name="email" placeholder="E-mail"  onChange={this.handleChange} /> */}
-                        <input type="password" name="password" placeholder="Password" onChange={this.handleChange} />
+                        <input type="password" name="password" placeholder="Password" onChange={this.handleChange} style={{width:'30vh'}} />
                         {/* <input type="password" name="password2" placeholder="Retype password" onChange={this.handleChange} /> */}
                         
                         <input type="submit" name="signup_submit" value="LogIn" />

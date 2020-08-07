@@ -30,7 +30,7 @@ router.post("/projects/:id/delete", isAuth, async (req, res, next) => {
 
 router.post("/projects/:id/edit", isAuth, async (req, res, next) => {
   const project = await Project.findById(req.params.id);
-  if (project.user === req.user._id) {
+  if (project.user.toString() === req.user._id.toString()) {
     const project = await Project.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });

@@ -33,7 +33,7 @@ class SignUp extends Component {
                 <div id="login-box">
                     <div class="left">
                         <h1>Sign up</h1>
-                        
+                        <br />
                         <form onSubmit={this.handleSubmit}>
                         <input type="text" name="name" placeholder="Name" onChange={this.handleChange} />
                         <input type="text" name="email" placeholder="E-mail"  onChange={this.handleChange} />

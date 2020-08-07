@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import {HashLink} from 'react-router-hash-link'
 
 class Footer extends Component {
     render() {
@@ -17,12 +18,12 @@ class Footer extends Component {
                                 <div className="col-xs-6 col-md-3">
                                     <h6>CATEGORIES</h6>
                                     <ul className="footer-links">
-                                    <li><Link to="/getinspired/#kitchens">Kitchens</Link></li>
-                                    <li><Link to="/getinspired/#livingrooms">Living Rooms</Link></li>
-                                    <li><Link to="/getinspired/#diningrooms">Dining Rooms</Link></li>
-                                    <li><Link to="/getinspired/#bathrooms">Bathrooms</Link></li>
-                                    <li><Link to="/getinspired/#patios">Patios</Link></li>
-                                    <li><Link to="/getinspired/#entryways">Entryways</Link></li>
+                                    <li><HashLink to="/getinspired#kitchens">Kitchens</HashLink></li>
+                                    <li><HashLink to="/getinspired#livingrooms">Living Rooms</HashLink></li>
+                                    <li><HashLink to="/getinspired#diningrooms">Dining Rooms</HashLink></li>
+                                    <li><HashLink to="/getinspired#bathrooms">Bathrooms</HashLink></li>
+                                    <li><HashLink to="/getinspired#patios">Patios</HashLink></li>
+                                    <li><HashLink to="/getinspired#entryways">Entryways</HashLink></li>
                                     </ul>
                                 </div>
 
@@ -32,8 +33,7 @@ class Footer extends Component {
                                     <li><Link to="/about">About Us</Link></li>
                                     <li><Link to="/getinspired">Get Inspired</Link></li>
                                     <li><Link to="/profile">Your Profile</Link></li>
-                                    <li><Link to="/privacypolicy">Privacy Policy</Link></li>
-                                    <li><Link to="/contact">Contact Us</Link></li>
+                                    <li><Link to="/log-in">LogIn</Link></li>
                                     </ul>
                                 </div>
                             </div>

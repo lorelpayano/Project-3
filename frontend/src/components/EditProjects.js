@@ -49,17 +49,17 @@ class EditProjects extends Component {
 
       showSupplies = () => {
           return (
-              <ul>
+              <ul style={{listStyleType: 'none', paddingTop:'25px'}}>
                   {this.state.supplies.map((item,i) => <li key={item.item}>
                     {<>{`${item.item }, total price: ${ item.price }`}
-                    <button onClick={() => this.deleteSupply(i)}>X</button>
+                    <button style={{width:'25px', height:'25px'}} onClick={() => this.deleteSupply(i)}>x</button>
                     </>}
                   </li>)}
                   {this.state.images.map((img,i) => (
                     <li key={img}>
                       {<>
                         <img style= {{height: '50px'}}src = {img}/>
-                      <button onClick={() => this.deleteImg(i)}>X</button> </>
+                      <button style={{width:'25px', height:'25px'}} onClick={() => this.deleteImg(i)}>x</button> </>
                       }
                     </li>
                   ))}
@@ -75,56 +75,66 @@ class EditProjects extends Component {
         
     handleSubmit = async e => {
         e.preventDefault();
-        let project = await actions.editProject(this.state);
-        console.log(project)
-        this.props.history.push(`/projects/${project.data.project._id}`)
+        let response = await actions.editProject(this.state);
+        console.log(response)
+        this.props.history.push(`/projects/${response.data?.project?._id}`)
     }
     
     
     render() {
         return (
-            <div>
-        <Cloudinary setUrl={this.setUrl}/>
-        <br />
-        <label>Name:</label>
-        <br />
-        <input type='text' name='name' value={this.state.name} onChange={this.changeHandler}/>
-        <br />
-        <label>Budget</label>
-        <br />
-        $ <input type='text' name='budget' value={this.state.budger} onChange={this.changeHandler}/>
-        <br />
+          <div>
+              <h2 className='create-heading'>Edit Project</h2>
+              <div className='create-project'>
+                <br />
 
-        <label>Supplies:</label>
-        <br />
-        <input type="text" placeholder='eg. 400 nails' name="supply" value={this.state.supply} onChange={this.changeHandler} /> 
-        <br />
-        <label>Price:</label>
-        <br />
-        <input type="number" name="price" value={this.state.price}onChange={this.changeHandler} />
-        <button onClick= {this.addSupplies}>Add</button>
-        <br />
-        {this.showSupplies()}
+                <div>
+                  <label className='create-labels'> Project Name:</label>
+                  <br />
+                  <input className='create-inputs' type='text' name='name' value={this.state.name} onChange={this.changeHandler}/>
+                  <br />
+                  <label className='create-labels'>Budget</label>
+                  <br />
+                  <input className='create-inputs' type='text' name='budget' value={this.state.budget} onChange={this.changeHandler}/>
+                  <br />
 
-        <label>Links:</label>
-        <br />
-        <input type="textfield" name="links" onChange={this.changeHandler} style={{ height: "100px", width: "500px" }}/>
-        <br />
-        <label>Notes</label>
-        <br />
-        <input type="textfield" name="notes" onChange={this.changeHandler} style={{ height: "100px", width: "500px" }}/>
-        <br />
-        <label>Status:</label>
-        <br />
-        <select name='status'onChange={this.changeHandler}>
-            <option value='Completed' >Completed</option>
-            <option value='Ongoing' >Ongoing</option>
-            <option value='Not Started' >Not Started</option>
-        </select>
-        <br />
-        <form class="create-new" onSubmit={this.handleSubmit}>
-        <button type="submit">Submit</button>
-        </form> 
+                  <label className='create-labels'>Supplies:</label>
+                  <br />
+                  <input className='create-inputs' type="text" placeholder='eg. countertops' name="supply" value={this.state.supply} onChange={this.changeHandler} /> 
+                  <br />
+                  <label className='create-labels'>Price:</label>
+                  <br />
+                  <input className='create-inputs' type="number" name="price" value={this.state.price}onChange={this.changeHandler} />
+                  <button onClick= {this.addSupplies}>Add</button>
+                  <br />
+                  {this.showSupplies()}
+                </div>
+
+                <div>
+                  <label className='create-labels'>Links:</label>
+                  <br />
+                  <input className='create-inputs' type="textfield" name="links" onChange={this.changeHandler} style={{ height: "100px", width: "500px" }}/>
+                  <br />
+                  <label className='create-labels'>Notes</label>
+                  <br />
+                  <input className='create-inputs' type="textfield" name="notes" onChange={this.changeHandler} style={{ height: "100px", width: "500px" }}/>
+                  <br />
+                  <label className='create-labels'>Status:</label>
+                  <br />
+                  <select name='status'onChange={this.changeHandler}>
+                      <option value='Completed' >Completed</option>
+                      <option value='Ongoing' >Ongoing</option>
+                      <option value='Not Started' >Not Started</option>
+                  </select>
+                  <br />
+                  <br />
+                  <Cloudinary setUrl={this.setUrl}/>
+                </div>
+              </div>
+          
+              <form class="create-new" onSubmit={this.handleSubmit}>
+              <button type="submit">Submit</button>
+              </form> 
       </div>
         );
     }

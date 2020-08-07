@@ -25,9 +25,10 @@ class Cloudinary extends Component {
 
   render() {
     return (
-      <div>
+      <div className='cloudinary'>
         <form onSubmit={this.handleSubmit}>
-          <label>Upload Image</label>
+          <label style={{textDecoration:'underline'}}>Upload Image</label>
+          <br />
           <input onChange={this.uploadFile} type="file" />
 
           <button>Upload</button>

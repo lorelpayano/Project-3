@@ -17,6 +17,8 @@ import CreateProject from "./components/CreateProject";
 import DisplayProject from "./components/DisplayProject";
 import ScrollToTop from './components/HOC/ScrollToTop'
 import EditProjects from './components/EditProjects'
+import { Link } from "react-router-dom";
+
 
 class App extends Component {
   state = {};
@@ -43,7 +45,7 @@ class App extends Component {
         {this.state.email}
 
         <nav className="nav">
-        <img src='logo.png' className='logo'/>
+        <Link to='/'><img src='logo.png' className='logo'/></Link>
           <NavLink className="nav-links" to="/">
             Home
           </NavLink>
@@ -79,7 +81,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={(props) => <Home {...props} />} />
             <Route exact path="/about" render={() => <About />} />
-            <Route exact path="/getinspired" render={() => <GetInspired />} />
+            <Route exact path="/getinspired" key={Date.now()} render={() => <GetInspired />} />
             <Route exact path="/sign-up" render={(props) => <SignUp {...props} setUser={this.setUser} />}/>
             <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser} />}/>
             <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state} />}/>

@@ -36,7 +36,13 @@ import Carousel from "react-bootstrap/Carousel";
 // import { Button } from 'react-bootstrap';
 
 class GetInspired extends Component {
+
+  componentDidMount(){
+    
+  }
+
   render() {
+    console.log(this)
     return (
       <div>
 

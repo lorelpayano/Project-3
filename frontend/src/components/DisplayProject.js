@@ -18,9 +18,10 @@ class DisplayProject extends Component {
     return (
       <div className="projects-page">
         <p className='project-name'>{this.state.project.name}</p><br />
-        {this.state.project.images?.map((eachImage) => (
+        <p style={{fontSize:'3vh'}}>${this.state.project.budget}</p><br />
+        <div className='image-div'>{this.state.project.images?.map((eachImage) => (
           <img className="project-image" src={eachImage} alt="project-img" />
-        ))}
+        ))}</div>
         {this.state.project.supplies?.map((eachSupply) => (
           <div className="project-details">{`${eachSupply.item}: $${eachSupply.price}`}</div>
         ))}

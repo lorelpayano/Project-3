@@ -16,7 +16,7 @@ const responseGoogle = (props) => {
         await props.setUser({ ...user.data });
         props.history.push('/profile')
       })
-      .catch(({ response }) => console.error(response.data));
+      .catch(( response ) => console.error(response));
   };
   return (
     <GoogleLogin
