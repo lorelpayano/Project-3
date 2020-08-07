@@ -903,7 +903,9 @@ padding: 0 0 20px 0;
 .image-div {
   display: flex;
   justify-content: space-around;
-  padding: 0 50vh;
+  padding: 0 40vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .project-details {
